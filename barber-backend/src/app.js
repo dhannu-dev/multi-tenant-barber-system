@@ -15,6 +15,8 @@ app.use(
   }),
 );
 
+
+
 app.use("/api/tenants", tenantRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/services", serviceRoutes);
