@@ -10,10 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://multi-tenant-barber-system.vercel.app",
-    ],
+    origin: true,
     credentials: true,
   }),
 );
