@@ -87,7 +87,11 @@ export const getTenants = async (req, res) => {
 
     return res.json(tenants);
   } catch (error) {
-    res.status(500).json({ message: "Failed to fetch tenants" });
+    console.error("TENANT ERROR:", error);
+    res.status(500).json({
+      message: "Failed to fetch tenants",
+      error: error.message,
+    });
   }
 };
 
