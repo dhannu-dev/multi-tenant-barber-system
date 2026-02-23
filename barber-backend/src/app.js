@@ -10,12 +10,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://multi-tenant-barber-system.vercel.app",
+    origin: [
+      "http://localhost:3000",
+      "https://multi-tenant-barber-system.vercel.app",
+      "https://multi-tenant-barber-system-production.vercel.app",
+    ],
     credentials: true,
   }),
 );
-
-
 
 app.use("/api/tenants", tenantRoutes);
 app.use("/api/admin", adminRoutes);
