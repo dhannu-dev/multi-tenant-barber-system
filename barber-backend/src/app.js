@@ -19,10 +19,6 @@ app.use(
   }),
 );
 
-app.get("/", (req, res) => {
-  res.status(200).send("Backend is running 🚀");
-});
-
 app.use("/api/tenants", tenantRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/services", serviceRoutes);
